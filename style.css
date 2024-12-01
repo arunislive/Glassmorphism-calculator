@@ -1,0 +1,77 @@
+body {
+  background: linear-gradient(45deg, rgb(8, 215, 218), rgb(255, 133, 12));
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.calculator {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 240px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.calculator input[type="text"] {
+  grid-column: 1 / span 4;
+  padding: 0.625rem;
+  border-radius: 5px;
+  border: none;
+  text-align: right;
+  font-size: 1.125rem;
+  box-shadow: 0px 2px 5px inset rgba(0, 0, 0, 0.5);
+  background-color: rgba(132, 206, 177, 0.45);
+  color: #333;
+}
+
+.calculator input[type="text"]:disabled {
+  background-color: rgba(132, 206, 177, 0.25);
+  cursor: not-allowed;
+}
+
+.calculator .btn {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3), 0px -2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  grid-column: span 1;
+  font-size: 1rem;
+  outline: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.calculator .btn.operator {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.calculator .btn.del {
+  grid-column: span 2;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.calculator .btn.equal {
+  grid-column: span 4;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.calculator .btn:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+  transform: translateY(-2px);
+}
+
+.calculator .btn:active {
+  background-color: rgba(200, 200, 200, 0.95);
+  transform: translateY(1px);
+}
